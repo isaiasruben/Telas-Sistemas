@@ -1,0 +1,502 @@
+@font-face {
+    font-family: 'poppins';
+    src: url('../poppins/Poppins-Regular.ttf')/*Para os demais navegadores*/
+    ;
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppins';
+}
+
+.head {
+    height: 80px;
+    background-color: #252526;
+    color: white;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 50;
+}
+
+.logo {
+    float: left;
+    padding: 5px;
+}
+
+
+.title {
+    float: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+}
+
+.title h2 {
+    text-align: center;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #252526;
+    float: right;
+    height: 90px;
+}
+
+#list_01{
+    margin-left: 280px;
+    float: left;
+    margin-top: -60px;
+    border: dashed;
+    border-radius: 100%;
+    border-color: greenyellow;
+}
+
+#list_02{
+    margin-left: 450px;
+    float: left;
+    margin-top: -60px;
+    border: dashed;
+    border-radius: 100%;
+    border-color: greenyellow;
+}
+
+#list_03{
+    margin-left: 560px;
+    float: left;
+    margin-top: -60px;
+    border: dashed;
+    border-radius: 100%;
+    border-color: greenyellow;
+}
+
+#list_04{
+    margin-left: 690px;
+    float: left;
+    margin-top: -60px;
+    border: dashed;
+    border-radius: 100%;
+    border-color: greenyellow;
+}
+
+#list_05{
+    margin-left: 750px;
+    float: left;
+    margin-top: -60px;
+    border: dashed;
+    border-radius: 100%;
+    border-color: greenyellow;
+}
+
+#list_06{
+    margin-left: 800px;
+    float: left;
+    margin-top: -60px;
+    border: dashed;
+    border-radius: 100%;
+    border-color: greenyellow;
+}
+
+#list_07{
+    margin-left: 910px;
+    float: left;
+    margin-top: -60px;
+    border: dashed;
+    border-radius: 100%;
+    border-color: greenyellow;
+}
+
+#list_08{
+    margin-left: 999px;
+    float: left;
+    margin-top: -60px;
+    border: dashed;
+    border-radius: 100%;
+    border-color: greenyellow;
+}
+
+#list_09{
+    margin-right:150px;
+    float: right;
+    margin-top: -60px;
+    border: dashed;
+    border-radius: 100%;
+    border-color: greenyellow;
+}
+
+.nav-list a{
+    text-decoration: none;
+}
+
+#imagens{
+    float: right;
+    margin-top: -75px;
+    margin-right: 10px;
+}
+
+.menu a {
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+    margin-right: 15px;
+}
+
+
+.fotos img {
+    width: 300px;
+    height: 300px;
+    margin-right: 10px;
+}
+
+.descricao img {
+    float: left;
+    margin-right: 30px;
+    height: 600px;
+    margin-bottom: 10px;
+}
+
+.descricao {
+    overflow: hidden;
+}
+
+
+.text p {
+    text-align: justify;
+    padding: 10px;
+}
+
+.bac-img {
+    width: 99vw;
+}
+
+.footer {
+    background-color: #474B3E;
+    color: white;
+    text-align: center;
+    height: 150px;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 0px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 8pt;
+    font-weight: 400;
+}
+
+.info {
+    margin-right: 10px;
+    width: 400px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.info a {
+    text-decoration: none;
+    color: white;
+}
+
+.left-img {
+    float: right;
+    height: 400px;
+    width: 400px;
+    overflow: hidden;
+}
+
+.content-text {
+    float: left;
+    width: 900px;
+    padding: 20px 60px;
+    color: #999999;
+}
+
+.blocos {
+    margin-top: 50px;
+    padding-left: 20px;
+}
+
+.content-text p {
+    text-align: justify;
+    margin-top: 5px;
+}
+
+.nav label {
+    width: 150px;
+    height: 100%;
+    display: none;
+    position: absolute;
+    opacity: 0;
+    z-index: 9;
+    cursor: pointer;
+    transition: opacity .2s;
+    color: #FFF;
+    font-size: 156pt;
+    text-align: center;
+    line-height: 380px;
+    font-family: "Varela Round", sans-serif;
+    background-color: rgba(255, 255, 255, .3);
+    text-shadow: 0px 0px 15px rgb(119, 119, 119);
+}
+
+.slide:hover+.nav label {
+    opacity: 0.5;
+}
+
+.nav label:hover {
+    opacity: 1;
+}
+
+.nav .next {
+    right: 0;
+}
+
+input:checked+.slide-container .slide {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1s ease-in-out 0.1s;
+}
+
+input:checked+.slide-container .nav label {
+    display: block;
+}
+
+.nav-dots {
+    width: 100%;
+    bottom: 9px;
+    height: 11px;
+    display: block;
+    position: relative;
+    text-align: center;
+}
+
+.nav-dots .nav-dot {
+    top: 375px;
+    width: 11px;
+    height: 11px;
+    margin: 0 4px;
+    position: relative;
+    border-radius: 100%;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nav-dots .nav-dot:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+input#img-1:checked~.nav-dots label#img-dot-1,
+input#img-2:checked~.nav-dots label#img-dot-2,
+input#img-3:checked~.nav-dots label#img-dot-3,
+input#img-4:checked~.nav-dots label#img-dot-4,
+input#img-5:checked~.nav-dots label#img-dot-5 {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.social {
+    margin-right: 15px;
+}
+
+.social img {
+    margin-top: 20px;
+}
+
+.bar {
+    background-color: #3F3F3F;
+    padding: 20px;
+    margin-top: 100px;
+    text-align: center;
+    color: white;
+}
+
+span {
+    color: red;
+    font-size: 45pt;
+}
+
+.div-content {
+    padding: 15px 200px;
+    text-align: justify;
+    font-size: 13pt;
+}
+
+.div-content p {
+    margin-top: 10px;
+}
+
+.divisao {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 200px;
+}
+
+.flex {
+    margin: 10px;
+}
+
+.flex p {
+    text-align: justify;
+}
+
+
+.content {
+    margin-top: 80px;
+    padding: 20px 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.group {
+    display: flex;
+    flex-direction: row;
+}
+
+.input-group {
+    padding: 10px 10px;
+    color: #2B2B2B;
+    background-color: #FAFAFA;
+    margin: 5px 10px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #8F8F8F;
+    width: 100%;
+}
+
+legend {
+    color: red;
+    text-align: center;
+    font-size: 18pt;
+}
+
+.left {
+    width: 60%;
+}
+
+.dir {
+    width: 600px;
+    background-size: 100%;
+    margin-left: 20px;
+}
+
+.lb-check {
+    color: #3F3F3F;
+}
+
+.check {
+    margin-top: 5px;
+    width: 60px;
+}
+
+.btn-enviar {
+    background-color: #10448B;
+    color: white;
+    padding: 10px 15px;
+    width: 40%;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.dir-title {
+    background-color: #2B2B2B;
+    color: white;
+    text-align: center;
+}
+
+.dir-content {
+    padding: 10px;
+}
+
+.dir-content ul {
+    list-style: none;
+}
+
+.div-block {
+    margin-top: 10px;
+    border: 1px solid #2B2B2B;
+}
+
+.div-foto img {
+    width: 100%;
+}
+
+.grelha {
+    margin-top: 80px;
+}
+
+.grelha-img {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.content-img {
+    background-color: #10448B;
+    padding: 5px;
+    color: white;
+    text-align: center;
+}
+
+.group-img {
+    width: 400px;
+    height: 300px;
+    margin-right: 20px;
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+}
+
+#img{
+    float: right;
+    margin-top: -203px;
+}
+
+#adicional{
+    float: right;
+    font-size: 12px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: -20px;
+    height: 300px;
+}
+
+#hr{
+   margin-right: 340px;
+}
+
+#IP{
+    font-size: 16px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#decoraction{
+    text-decoration: none;
+}
+
+#morte{
+    float: right;
+    margin-right: -330px;
+    margin-top: -60px;
+    margin-bottom: 30px;
+}
